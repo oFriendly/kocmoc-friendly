@@ -1999,8 +1999,9 @@ task.spawn(function()
     end
     end)
 end)
-
-if _G.autoloadpremium then if isfile("kocmoc/premium/BSS_".._G.autoloadpremium..".json") then kocmoc = game:service'HttpService':JSONDecode(readfile("kocmoc/premium/BSS_".._G.autoloadpremium..".json")) end end
+--premium autoload
+if _G.autoloadpremium then if isfile("premium/BSS_".._G.autoloadpremium..".json") then kocmoc = game:service'HttpService':JSONDecode(readfile("premium/BSS_".._G.autoloadpremium..".json")) end end
+--premium autoload
 if _G.autoload then if isfile("kocmoc/BSS_".._G.autoload..".json") then kocmoc = game:service'HttpService':JSONDecode(readfile("kocmoc/BSS_".._G.autoload..".json")) end end
 for _, part in next, workspace:FindFirstChild("FieldDecos"):GetDescendants() do if part:IsA("BasePart") then part.CanCollide = false part.Transparency = part.Transparency < 0.5 and 0.5 or part.Transparency task.wait() end end
 for _, part in next, workspace:FindFirstChild("Decorations"):GetDescendants() do if part:IsA("BasePart") and (part.Parent.Name == "Bush" or part.Parent.Name == "Blue Flower") then part.CanCollide = false part.Transparency = part.Transparency < 0.5 and 0.5 or part.Transparency task.wait() end end
